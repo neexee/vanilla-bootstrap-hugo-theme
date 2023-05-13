@@ -3,7 +3,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   {{ if .IsHome }}<meta name="description" content="{{ $.Site.Params.description }}" /> {{ end }}
   <meta name="author" content="{{ $.Site.Params.AuthorName }}" />
-  {{ hugo.Generator }}
   {{ $summary := trim (.Summary | plainify | htmlUnescape) "\n\r"
     | default .Title }}
   <meta name="description" content="{{ $summary }}">
